@@ -15,7 +15,7 @@
       background: #fafafa;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
       color: #222;
     }
 
@@ -36,17 +36,69 @@
       padding: 18px;
       margin: 20px 0;
     }
+
+    .delete-box {
+      border-color: #d8a5a1;
+      background: #fffafa;
+    }
+
+    .delete-box h2 {
+      margin-top: 0;
+    }
+
+    .delete-link {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 11px 16px;
+      border-radius: 8px;
+      background: #b9362f;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .delete-link:hover,
+    .delete-link:focus {
+      background: #972b26;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 0.94em;
+    }
+
+    code {
+      background: #f0f0f0;
+      border-radius: 4px;
+      padding: 2px 5px;
+    }
   </style>
 </head>
 <body>
 
   <h1>Política de privacidad de PAC</h1>
 
-  <p class="date">Última actualización: 4 de julio de 2026</p>
+  <p class="date">Última actualización: 12 de julio de 2026</p>
 
   <div class="box">
     <p>
-      PAC es un juego de palabras a contrarreloj. Esta política de privacidad explica qué datos puede recoger la aplicación, para qué se utilizan y cómo pueden solicitarse su eliminación.
+      PAC es un juego de palabras a contrarreloj. Esta política de privacidad explica qué datos puede recoger la aplicación, para qué se utilizan y cómo pueden eliminarse la cuenta y los datos asociados.
+    </p>
+  </div>
+
+  <div class="box delete-box" id="eliminacion-cuenta">
+    <h2>Eliminar cuenta y datos de PAC</h2>
+    <p>
+      Puedes eliminar directamente tu cuenta desde la aplicación entrando en <strong>Ajustes → Eliminar cuenta y datos</strong>. Antes de ejecutar el borrado, PAC mostrará qué información desaparecerá y exigirá dos confirmaciones.
+    </p>
+    <p>
+      Si ya no tienes instalada la aplicación, puedes iniciar la solicitud desde esta misma página mediante el siguiente enlace:
+    </p>
+    <a class="delete-link" href="mailto:miguelvazquezruiz7@gmail.com?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20cuenta%20PAC&amp;body=Solicito%20la%20eliminaci%C3%B3n%20de%20mi%20cuenta%20y%20datos%20de%20PAC.%0A%0ACorreo%20de%20Google%20asociado%20a%20PAC%3A%20%0ANombre%20de%20usuario%20en%20PAC%3A%20">
+      Solicitar eliminación desde fuera de PAC
+    </a>
+    <p class="muted">
+      Para verificar la titularidad, envía preferentemente la solicitud desde el mismo correo de Google utilizado en PAC e indica tu nombre de usuario. La eliminación afecta únicamente a PAC: no elimina tu cuenta de Google.
     </p>
   </div>
 
@@ -70,38 +122,38 @@
     PAC puede recoger o tratar los siguientes datos, dependiendo del uso que haga el usuario de la aplicación:
   </p>
 
-  <h3>Datos de inicio de sesión</h3>
+  <h3>Datos de inicio de sesión y perfil</h3>
 
   <p>
-    Si el usuario decide iniciar sesión con Google, la aplicación puede recibir datos básicos asociados a esa cuenta, como identificador de usuario, nombre o alias, dirección de correo electrónico e imagen de perfil si Google la proporciona.
+    Si el usuario decide iniciar sesión con Google, la aplicación puede recibir datos básicos asociados a esa cuenta, como identificador de usuario, dirección de correo electrónico, nombre e imagen de perfil si Google los proporciona. PAC también almacena el nombre de usuario elegido dentro del juego.
   </p>
 
   <p>
-    El inicio de sesión con Google es opcional. El usuario también puede jugar como invitado.
+    El inicio de sesión con Google es opcional. El usuario también puede jugar como invitado, aunque en ese caso no se registran sus resultados en las clasificaciones y logros en línea.
   </p>
 
-  <h3>Datos de juego</h3>
+  <h3>Datos de juego y funciones sociales</h3>
 
   <p>
-    La aplicación puede guardar información relacionada con el uso del juego, como puntuaciones, récords, logros, progreso, estadísticas de partidas y posiciones en clasificaciones.
+    La aplicación puede guardar información relacionada con el uso del juego, como puntuaciones, récords, niveles, logros, medallas, progreso, estadísticas de partidas y posiciones en clasificaciones. También puede guardar las relaciones de seguimiento entre jugadores y las reacciones realizadas a las partidas.
   </p>
 
   <h3>Datos técnicos</h3>
 
   <p>
-    La aplicación puede utilizar servicios de Google o Firebase para permitir el inicio de sesión, almacenar datos del juego, mantener la seguridad y mejorar el funcionamiento de la aplicación.
+    La aplicación utiliza servicios de Google y Firebase para permitir el inicio de sesión, almacenar datos del juego, mantener la seguridad y prestar sus funcionalidades en línea.
   </p>
 
   <h2>3. Finalidad del uso de los datos</h2>
 
-  <p>
-    Los datos se utilizan para:
-  </p>
+  <p>Los datos se utilizan para:</p>
 
   <ul>
     <li>permitir el inicio de sesión con Google;</li>
-    <li>guardar puntuaciones, logros y progreso;</li>
-    <li>mostrar clasificaciones;</li>
+    <li>crear y mantener el perfil y nombre de usuario de PAC;</li>
+    <li>guardar puntuaciones, logros, medallas y progreso;</li>
+    <li>mostrar clasificaciones y funciones entre amigos;</li>
+    <li>permitir reacciones a las partidas;</li>
     <li>mejorar la estabilidad y funcionamiento de la aplicación;</li>
     <li>prevenir errores técnicos o usos indebidos.</li>
   </ul>
@@ -117,7 +169,11 @@
   </p>
 
   <p>
-    Algunos datos pueden ser tratados mediante servicios técnicos necesarios para el funcionamiento de la aplicación, como Google Firebase o servicios equivalentes de Google, con la finalidad de permitir el inicio de sesión, guardar puntuaciones, mostrar logros y mantener el funcionamiento del juego.
+    Algunos datos son tratados mediante servicios técnicos necesarios para el funcionamiento de la aplicación, principalmente Google Firebase, con la finalidad de permitir el inicio de sesión, almacenar información del juego y mantener las funcionalidades en línea.
+  </p>
+
+  <p>
+    El nombre de usuario, las puntuaciones, las posiciones, las medallas y las reacciones pueden ser visibles para otros jugadores dentro de las clasificaciones y funciones sociales de PAC.
   </p>
 
   <h2>5. Publicidad</h2>
@@ -139,29 +195,35 @@
   <h2>7. Conservación de los datos</h2>
 
   <p>
-    Los datos asociados a una cuenta se conservarán mientras el usuario mantenga su cuenta o mientras sean necesarios para prestar las funcionalidades del juego, como puntuaciones, logros y clasificaciones.
+    Los datos asociados a una cuenta se conservarán mientras el usuario mantenga su cuenta o mientras sean necesarios para prestar las funcionalidades del juego.
   </p>
 
   <p>
-    El usuario puede solicitar la eliminación de sus datos conforme se indica en el apartado siguiente.
+    Cuando la cuenta se elimina, PAC borra los datos asociados, salvo información que deba conservarse temporalmente por una obligación legal, por seguridad o para prevenir fraude. En la versión actual PAC no prevé conservar puntuaciones, clasificaciones o datos sociales después de eliminar una cuenta.
   </p>
 
   <h2>8. Eliminación de cuenta y datos</h2>
 
   <p>
-    El usuario puede solicitar la eliminación de su cuenta y de los datos asociados a PAC escribiendo a:
+    Desde la aplicación, el usuario puede entrar en <strong>Ajustes → Eliminar cuenta y datos</strong>. PAC informa de las consecuencias, exige escribir <code>ELIMINAR</code> y solicita una confirmación final antes de iniciar el borrado automático.
+  </p>
+
+  <p>La eliminación incluye:</p>
+
+  <ul>
+    <li>la cuenta de PAC vinculada al identificador de Firebase;</li>
+    <li>el perfil y el nombre de usuario reservado;</li>
+    <li>las puntuaciones, clasificaciones, logros y medallas;</li>
+    <li>las relaciones de seguimiento y amigos;</li>
+    <li>las reacciones realizadas y las asociadas a las partidas eliminadas.</li>
+  </ul>
+
+  <p>
+    La acción es irreversible. No elimina la cuenta general de Google del usuario, sino únicamente la cuenta de autenticación utilizada por PAC y los datos almacenados por el juego.
   </p>
 
   <p>
-    <strong>miguelvazquezruiz7@gmail.com</strong>
-  </p>
-
-  <p>
-    En la solicitud debe indicar el correo electrónico asociado a la cuenta de Google utilizada en PAC.
-  </p>
-
-  <p>
-    Una vez recibida la solicitud, se eliminarán los datos asociados a la cuenta en un plazo razonable, salvo aquellos que deban conservarse por motivos legales, de seguridad o prevención de fraude.
+    Si el usuario ya no puede acceder a la aplicación, puede iniciar la solicitud desde el botón situado al comienzo de esta misma página o escribir a <strong>miguelvazquezruiz7@gmail.com</strong>, indicando el correo de Google asociado a PAC y su nombre de usuario. Podrá solicitarse información adicional únicamente para verificar la titularidad de la cuenta.
   </p>
 
   <h2>9. Menores de edad</h2>
@@ -171,17 +233,13 @@
   </p>
 
   <p>
-    Si un padre, madre o tutor considera que se han recogido datos de un menor sin consentimiento adecuado, puede solicitar su eliminación escribiendo a:
-  </p>
-
-  <p>
-    <strong>miguelvazquezruiz7@gmail.com</strong>
+    Si un padre, madre o tutor considera que se han recogido datos de un menor sin consentimiento adecuado, puede solicitar su eliminación escribiendo a <strong>miguelvazquezruiz7@gmail.com</strong>.
   </p>
 
   <h2>10. Seguridad</h2>
 
   <p>
-    PAC utiliza servicios técnicos razonables para proteger los datos de los usuarios y transmitirlos de forma segura cuando sea necesario.
+    PAC utiliza servicios técnicos razonables para proteger los datos de los usuarios y transmitirlos de forma segura cuando sea necesario. La eliminación automática se autoriza mediante la sesión de Firebase del propio usuario y no permite seleccionar la cuenta de otra persona.
   </p>
 
   <h2>11. Cambios en esta política</h2>
