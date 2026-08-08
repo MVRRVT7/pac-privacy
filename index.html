@@ -58,18 +58,20 @@
   <p>Esta información se utiliza para mejorar el funcionamiento de PAC, comprender errores, evaluar si los jugadores pueden completar correctamente los procesos principales y analizar de forma agregada la evolución del juego.</p>
 
   <h3>Notificaciones</h3>
-  <p>PAC puede utilizar Firebase Cloud Messaging (FCM), un servicio de Google Firebase, para enviar notificaciones relacionadas con el juego. En Android, el usuario puede aceptar o rechazar el permiso de notificaciones y puede desactivar o volver a activar esta función desde Ajustes de PAC.</p>
-  <p>Cuando las notificaciones están habilitadas y Android ha concedido el permiso, PAC puede tratar un token técnico de FCM necesario para dirigir la notificación a esa instalación. También puede guardar información técnica relacionada con esta función, como si las notificaciones están activadas, el estado y los intentos del permiso, el momento en que se conceden o desactivan, la versión de la función, si la instalación corresponde a un invitado o a un usuario registrado y la última apertura de la aplicación.</p>
+  <p>PAC utiliza Firebase Cloud Messaging (FCM), un servicio de Google Firebase, para las notificaciones relacionadas con el juego. Dentro de PAC, las notificaciones aparecen activadas por defecto. En Android 13 y versiones posteriores, es el propio sistema Android el que muestra el permiso oficial de notificaciones; PAC no muestra una pantalla adicional de consentimiento para este permiso.</p>
+  <p>Si Android concede el permiso y las notificaciones siguen activadas en PAC, la aplicación puede obtener y conservar un token técnico de FCM necesario para dirigir las notificaciones a esa instalación. PAC también puede guardar información técnica relacionada con esta función, como el estado del permiso, los intentos de solicitud, la fecha en que se concede o se desactiva, la versión de la función, si la instalación corresponde a un invitado o a un usuario registrado y la última apertura de la aplicación.</p>
   <p>Si el usuario está registrado, estos datos técnicos pueden vincularse a su identificador de Firebase para poder enviar avisos relacionados con su cuenta, por ejemplo sobre duelos, resultados, retos o recordatorios. En el caso de invitados, PAC limita esta información a la instalación y puede utilizarla únicamente para recordatorios generales, como avisos de inactividad.</p>
-  <p>Si las notificaciones se desactivan en PAC o Android no concede el permiso, PAC no conserva en su telemetría un token FCM utilizable para el envío de notificaciones.</p>
+  <p>El usuario puede desactivar o volver a activar las notificaciones desde Ajustes de PAC. Si Android no concede el permiso o el usuario las desactiva en PAC, la aplicación no conserva en su telemetría un token FCM utilizable para enviar notificaciones.</p>
 
   <h3>Origen de instalación</h3>
   <p>En Android, PAC puede utilizar Google Play Install Referrer para conocer el origen técnico de una instalación y, cuando Google Play los facilita, parámetros asociados a campañas de promoción. Esta información se utiliza para medir la eficacia de la promoción y adquisición de usuarios.</p>
 
+  <h3>Firebase Analytics</h3>
+  <p>PAC utiliza Firebase Analytics para obtener estadísticas de uso de la aplicación, como sesiones, uso general, retención, versión de la aplicación, características técnicas del dispositivo y otros datos de uso agregados que ayudan a mejorar el juego.</p>
+  <p>En la versión 210, PAC configura Firebase Analytics sin Advertising ID y con las señales de personalización publicitaria desactivadas. PAC no utiliza estos datos para publicidad personalizada ni remarketing.</p>
+
   <h3>Servicios de Google y Firebase</h3>
-  <p>PAC utiliza servicios de Google y Firebase para el inicio de sesión, almacenamiento de datos en la nube, notificaciones y funcionamiento de determinadas características en línea.</p>
-  <p>La versión 210 incorpora infraestructura de Firebase Cloud Messaging para notificaciones. El código de PAC v210 no registra eventos propios de Firebase Analytics como herramienta de analítica de uso. Cualquier incorporación expresa de Firebase Analytics se reflejará en una actualización de esta política.</p>
-  <p>PAC no utiliza el Advertising ID para publicidad personalizada. La infraestructura de notificaciones descrita no requiere que PAC almacene el Advertising ID.</p>
+  <p>PAC utiliza servicios de Google y Firebase para el inicio de sesión, almacenamiento de datos en la nube, estadísticas de uso, notificaciones y funcionamiento de determinadas características en línea.</p>
 
   <h2>3. Finalidad del uso de los datos</h2>
   <p>Los datos se utilizan para:</p>
@@ -78,10 +80,10 @@
     <li>crear y mantener el perfil y nombre de usuario de PAC;</li>
     <li>guardar puntuaciones, logros, medallas, progreso y clasificaciones;</li>
     <li>permitir funciones de amigos, seguimiento, reacciones y duelos;</li>
-    <li>gestionar, cuando estén habilitadas, notificaciones y recordatorios relacionados con PAC;</li>
+    <li>gestionar notificaciones y recordatorios relacionados con PAC;</li>
     <li>mejorar la estabilidad, compatibilidad y funcionamiento de la aplicación;</li>
     <li>diagnosticar errores y problemas en procesos como el inicio de sesión o el guardado de partidas;</li>
-    <li>analizar de forma agregada el uso de PAC y su evolución mediante la telemetría propia;</li>
+    <li>analizar el uso de PAC mediante telemetría propia y Firebase Analytics;</li>
     <li>medir el origen de instalaciones y la eficacia de campañas de promoción;</li>
     <li>prevenir usos indebidos y mantener la seguridad del servicio.</li>
   </ul>
@@ -89,12 +91,12 @@
 
   <h2>4. Compartición y proveedores técnicos</h2>
   <p>PAC no vende datos personales de los usuarios.</p>
-  <p>Algunos datos son tratados mediante servicios técnicos necesarios para el funcionamiento de la aplicación, principalmente servicios de Google y Firebase, con la finalidad de permitir la autenticación, almacenar información del juego, gestionar notificaciones mediante Firebase Cloud Messaging y prestar las funcionalidades en línea.</p>
+  <p>Algunos datos son tratados mediante servicios técnicos necesarios para el funcionamiento de la aplicación, principalmente servicios de Google y Firebase, con la finalidad de permitir la autenticación, almacenar información del juego, prestar Firebase Analytics, gestionar notificaciones mediante Firebase Cloud Messaging y ofrecer las funcionalidades en línea.</p>
   <p>Determinados datos del juego son visibles para otros usuarios cuando forman parte de funciones sociales o competitivas, como clasificaciones, medallas, reacciones, amistades o duelos.</p>
 
   <h2>5. Publicidad</h2>
   <p>PAC no muestra anuncios dentro de la aplicación.</p>
-  <p>PAC no utiliza los datos personales tratados por el juego para publicidad personalizada.</p>
+  <p>PAC no utiliza Advertising ID en Firebase Analytics y no utiliza los datos personales tratados por el juego para publicidad personalizada o remarketing.</p>
   <p>Si en el futuro se incorporasen anuncios o nuevas tecnologías de medición publicitaria, esta política se actualizaría antes o al mismo tiempo que ese cambio.</p>
 
   <h2>6. Compras dentro de la aplicación</h2>
@@ -102,8 +104,8 @@
 
   <h2>7. Conservación de los datos</h2>
   <p>Los datos asociados a una cuenta se conservarán mientras el usuario mantenga su cuenta o mientras sean necesarios para prestar las funcionalidades del juego, analizar su funcionamiento, resolver incidencias o cumplir obligaciones legales.</p>
-  <p>Los datos técnicos de telemetría podrán conservarse durante el tiempo razonablemente necesario para analizar la evolución y estabilidad del servicio. Los datos técnicos de notificaciones, incluido el token FCM cuando esté activo, se conservarán mientras sean necesarios para prestar esa función y se actualizarán cuando cambie el estado del permiso o del token.</p>
-  <p>Cuando un usuario solicita la eliminación de su cuenta, se eliminarán también los datos de telemetría y notificaciones que puedan vincularse razonablemente con dicha cuenta o instalación, salvo información que deba conservarse temporalmente por obligación legal, seguridad o prevención de fraude.</p>
+  <p>Los datos técnicos de telemetría y estadísticas se conservarán durante el tiempo razonablemente necesario para analizar la evolución y estabilidad del servicio. Los datos técnicos de notificaciones, incluido el token FCM cuando esté activo, se conservarán mientras sean necesarios para prestar esa función y se actualizarán cuando cambie el estado del permiso o del token.</p>
+  <p>Cuando un usuario solicita la eliminación de su cuenta, se eliminarán también los datos propios de telemetría y notificaciones que puedan vincularse razonablemente con dicha cuenta o instalación, salvo información que deba conservarse temporalmente por obligación legal, seguridad o prevención de fraude. Los datos tratados por proveedores como Google/Firebase estarán además sujetos a sus propios mecanismos y plazos de conservación aplicables al servicio.</p>
 
   <h2>8. Eliminación de cuenta y datos</h2>
   <p>Desde la aplicación, el usuario puede entrar en <strong>Ajustes → Eliminar cuenta</strong>. PAC informa de las consecuencias, exige escribir <code>ELIMINAR</code> y solicita una confirmación final antes de registrar la solicitud.</p>
